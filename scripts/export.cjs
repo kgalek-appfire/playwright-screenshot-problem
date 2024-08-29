@@ -52,8 +52,8 @@ async function main() {
 
 	// This big export is not necessary, but it's an easy way to present the problem
 	// Feel free to change it during tests
-	const width = 5000;
-	const height = 100000;
+	const width = 20_000;
+	const height = 20_000;
 
 	console.log('Open page');
 
@@ -73,8 +73,13 @@ async function main() {
 	console.log('All elements rendered!');
 
 	await page.screenshot({type: 'png', path: '1.result.png'});
+	console.log('1.result.png done!');
+
 	await page.screenshot({type: 'png', path: '2.result.png'});
+	console.log('2.result.png done!');
+
 	await page.screenshot({type: 'png', path: '3.result.png'});
+	console.log('3.result.png done!');
 
 	console.log('Done!')
 
